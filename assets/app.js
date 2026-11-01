@@ -10,7 +10,6 @@ let numeroSeleccionado = null;
 
 document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add('tema-' + (typeof TEMA !== 'undefined' ? TEMA : 'verde'));
-  document.getElementById('info-nequi').textContent = typeof NEQUI !== 'undefined' ? NEQUI : '';
   cargarConfig();
   cargarBoletas();
 
@@ -47,7 +46,6 @@ async function cargarConfig() {
     const data = await res.json();
     if (!data.ok) return;
 
-    document.getElementById('info-valor-boleta').textContent = formatearCOP(data.valorBoleta);
     document.getElementById('info-loteria').textContent = data.loteria;
     document.getElementById('info-fecha').textContent = formatearFecha(data.fechaSorteo);
 

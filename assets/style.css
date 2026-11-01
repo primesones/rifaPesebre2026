@@ -9,7 +9,11 @@
   --color-text: #1c1c1e;
   --color-muted: #666;
   --radius: 10px;
+  --margen: 1rem;
+  /* Ancho común de encabezado y grilla (cabe en ancho y alto de pantalla). */
+  --ancho: min(calc(100vw - 2 * var(--margen)), 688px, max(18rem, calc(100dvh - 22rem)));
 }
+@media (max-width: 480px) { :root { --margen: .5rem; } }
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -116,7 +120,7 @@ header.hero .linea-disponibles {
   gap: .5rem;
   /* Se ajusta al ancho Y al alto de la pantalla (celular o tablet) para que
      encabezado + grilla + pie quepan juntos en un solo pantallazo. */
-  width: min(100%, max(18rem, calc(100dvh - 22rem)));
+  width: var(--ancho);
   margin-inline: auto;
 }
 
@@ -310,7 +314,7 @@ header.hero .hero-fila {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  max-width: 720px;
+  width: var(--ancho);
   margin: 0 auto;
 }
 
@@ -323,6 +327,7 @@ header.hero h1 {
   line-height: 1.15;
   text-align: left;
   margin: 0;
+  color: var(--color-disponible);
 }
 
 .foto-premio {
@@ -335,8 +340,8 @@ header.hero h1 {
 }
 
 .pildora-fecha {
-  display: inline-block;
-  min-width: 70%;
+  display: block;
+  width: var(--ancho);
   margin: 1.25rem auto .5rem !important;
   padding: .55rem 1.25rem;
   border: 2px solid currentColor;
@@ -356,7 +361,7 @@ header.hero .loteria {
 .pie-rifa {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  justify-content: center;
   margin-top: 1.5rem;
 }
 
