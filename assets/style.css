@@ -340,16 +340,11 @@ header.hero h1 {
 }
 
 .pildora-fecha {
-  display: block;
-  width: var(--ancho);
-  margin: 1.25rem auto .5rem !important;
-  padding: .55rem 1.25rem;
-  border: 2px solid currentColor;
-  border-radius: 999px;
+  /* Línea normal, igual que Lotería y Boleta (sin borde). */
+  margin: 1.25rem auto .15rem !important;
   font-family: 'Chewy', cursive;
   letter-spacing: .15em;
   text-transform: uppercase;
-  font-size: 1.15rem;
 }
 
 header.hero .linea-boleta {
@@ -441,7 +436,6 @@ body.tema-claro .foto-premio { border-color: var(--color-disponible); }
 @media (max-width: 480px) {
   header.hero h1 { font-size: 1.5rem; }
   .foto-premio { width: 90px; height: 90px; }
-  .pildora-fecha { font-size: .9rem; letter-spacing: .1em; }
   .logo-circulo { width: 80px; height: 80px; }
   .pie-datos { font-size: 1rem; }
   body.tema-verde .boleta { font-size: .75rem; }
