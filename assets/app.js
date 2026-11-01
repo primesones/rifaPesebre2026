@@ -48,6 +48,7 @@ async function cargarConfig() {
 
     document.getElementById('info-loteria').textContent = data.loteria;
     document.getElementById('info-fecha').textContent = formatearFecha(data.fechaSorteo);
+    document.getElementById('info-valor-boleta').textContent = formatearCOP(data.valorBoleta);
 
     const banner = document.getElementById('banner-ganador');
     if (data.numeroGanador) {

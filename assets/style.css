@@ -352,6 +352,12 @@ header.hero h1 {
   font-size: 1.15rem;
 }
 
+header.hero .linea-boleta {
+  font-family: 'Chewy', cursive;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
 header.hero .loteria {
   font-family: 'Chewy', cursive;
   letter-spacing: .25em;
