@@ -5,7 +5,7 @@ const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyAXY-AxSb3esyGwjW0
 // Apariencia de la página pública:
 //   'verde'  -> fondo verde con la foto del pesebre (como el modelo)
 //   'claro'  -> fondo blanco
-const TEMA = 'verde';
+const TEMA = 'claro';
 
 // Número de Nequi que se muestra al pie de la grilla.
 const NEQUI = '315 5783842';

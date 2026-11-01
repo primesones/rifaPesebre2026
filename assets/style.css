@@ -114,6 +114,10 @@ header.hero .linea-disponibles {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   gap: .5rem;
+  /* Se ajusta al ancho Y al alto de la pantalla (celular o tablet) para que
+     encabezado + grilla + pie quepan juntos en un solo pantallazo. */
+  width: min(100%, max(18rem, calc(100dvh - 22rem)));
+  margin-inline: auto;
 }
 
 .boleta {
@@ -420,7 +424,7 @@ body.tema-verde .badge.disponible { background: #14703a; }
 body.tema-verde table.tabla-admin { color: #fff; }
 
 /* ---- Tema claro (fondo blanco) ---- */
-body.tema-claro { background: #fff; color: #1c1c1e; --color-bg: #fff; --color-text: #1c1c1e; --color-muted: #666; }
+body.tema-claro { background: #fff; color: #1c1c1e; --color-bg: #fff; --color-card: #fff; --color-text: #1c1c1e; --color-muted: #666; }
 body.tema-claro .foto-premio { border-color: var(--color-disponible); }
 
 @media (max-width: 480px) {
