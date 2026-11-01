@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rifa Pesebre 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css?v=1" />
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-fila">
+    <h1>Rifa Pesebre<br />Primesones</h1>
+    <img src="assets/pesebre.jpg" alt="Pesebre navideño" class="foto-premio" />
+  </div>
+  <p class="pildora-fecha"><span id="info-fecha">—</span></p>
+  <p class="loteria" id="info-loteria">—</p>
+  <p class="linea-disponibles">Números disponibles: <strong id="info-disponibles">—</strong></p>
+</header>
+
+<div class="contenedor">
+
+  <div id="banner-ganador" class="banner-ganador" hidden></div>
+
+  <div class="leyenda">
+    <span class="disponible">Disponible</span>
+    <span class="no-disponible">No disponible</span>
+  </div>
+
+  <div id="grilla" class="grilla"></div>
+
+  <div class="pie-rifa">
+    <div class="logo-circulo"><img src="assets/logoprimesones.png" alt="Logo Fundación Primesones" /></div>
+    <div class="pie-datos">
+      <p>Valor: <strong id="info-valor-boleta">—</strong></p>
+      <p>Nequi: <strong id="info-nequi">—</strong></p>
+    </div>
+  </div>
+
+  <hr class="separador" />
+  <h2 class="titulo-listado">Listado de boletas</h2>
+  <div class="tabla-scroll">
+    <table class="tabla-admin">
+      <thead>
+        <tr>
+          <th>Número</th>
+          <th>Estado</th>
+          <th>Nombre</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpo-listado"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<div id="modal-info" class="modal-overlay" hidden>
+  <div class="modal">
+    <h2>Boleta <span id="info-modal-numero"></span></h2>
+    <p>Estado: <strong id="info-modal-estado"></strong></p>
+    <p>Reservada por: <strong id="info-modal-nombre"></strong></p>
+    <div class="acciones-modal">
+      <button type="button" id="btn-cerrar-modal-info" class="btn btn-secundario">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-reserva" class="modal-overlay" hidden>
+  <div class="modal">
+    <h2>Reservar boleta <span id="modal-numero"></span></h2>
+    <form id="form-reserva">
+      <div class="campo">
+        <label for="input-nombre">Nombre completo</label>
+        <input type="text" id="input-nombre" required />
+      </div>
+      <div class="campo">
+        <label for="input-telefono">Teléfono (opcional)</label>
+        <input type="tel" id="input-telefono" />
+      </div>
+      <div class="acciones-modal">
+        <button type="submit" id="btn-confirmar-reserva" class="btn btn-primario">Confirmar reserva</button>
+        <button type="button" id="btn-cancelar-modal" class="btn btn-secundario">Cancelar</button>
+      </div>
+      <div id="mensaje-reserva" class="mensaje-estado"></div>
+    </form>
+  </div>
+</div>
+
+<!-- Sube el ?v= cada vez que cambie style.css/app.js/config.js: algunos
+     celulares cachean estos archivos y no los vuelven a pedir si la URL
+     no cambia, aunque el contenido del repo sí haya cambiado. -->
+<script src="assets/config.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>
