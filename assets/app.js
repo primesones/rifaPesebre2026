@@ -203,6 +203,6 @@ function formatearCOP(valor) {
 
 function formatearFecha(fechaISO) {
   if (!fechaISO) return '';
-  const fecha = new Date(fechaISO + 'T00:00:00');
+  const fecha = new Date(String(fechaISO).slice(0, 10) + 'T00:00:00');
   return fecha.toLocaleDateString('es-CO', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 }
